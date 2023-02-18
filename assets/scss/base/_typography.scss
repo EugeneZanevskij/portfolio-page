@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+h1 {
+    font-size: 1.5rem;
+
+    @include respond-to(large) {
+        font-size: 2.25rem;
+    }
+}
+
+h2 {
+    font-size: 1.25rem;
+
+    @include respond-to(large) {
+        font-size: 1.5rem;
+    }
+}
+
+h3 {
+    font-size: 1.125rem;
+
+    @include respond-to(large) {
+        font-size: 1.25rem;
+    }
+}

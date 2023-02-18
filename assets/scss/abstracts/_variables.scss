@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+
+/* === Fonts ===*/
+$font-inika: 'Inika', serif;
+/* Font weight*/
+$font-bold: 700;
+$font-medium: 500;
+$font-regular: 400;
+
+/* === Colors ===*/
+/* Main color */
+$hue-color: 230;
+/* HSL color mode */
+$first-color: hsl($hue-color, 69%, 61%);
+$first-color-second: hsl($hue-color, 69%, 61%);
+$first-color-alt: hsl($hue-color, 57%, 53%);
+$first-color-lighter: hsl($hue-color, 92%, 85%);
+$title-color: hsl($hue-color, 8%, 15%);
+$text-color: hsl($hue-color, 8%, 45%);
+$text-color-light: hsl($hue-color, 8%, 65%);
+$input-color: hsl($hue-color, 70%, 96%);
+$body-color: hsl($hue-color, 60%, 99%);
+$container-color: #fff;
+$scroll-bar-color: hsl($hue-color, 12%, 90%);
+$scroll-thumb-color: hsl($hue-color, 12%, 80%);
+
+/* === Typography ===*/
+/* Font sizes */
+$big-font-size: 2.5rem;
+$normal-font-size: 1rem;
+$small-font-size: 0.875rem;
+$smaller-font-size: 0.75rem;
+
+/* === Breakpoints ===*/
+$breakpoints : (
+    "small": 36em,       //576px Large smartphones
+    "medium": 48em,       //768px Small tablets
+    "large": 62em,       //992px Tablets
+    "xlarge": 75em,       //1200px Desktops
+    "xxlarge": 87.5em,    //1400px Large desktops
+);
+
+/* === z-indexes ===*/
+$z-tooltip: 10;
+$z-fixed: 100;
+$z-modal: 1000;
+
+$header-height: 3rem;
