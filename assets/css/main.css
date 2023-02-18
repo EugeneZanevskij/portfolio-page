@@ -181,9 +181,63 @@ h3 {
   text-align: center;
   margin-bottom: 2rem;
 }
-.about__button {
+.about__button-cv {
   display: flex;
   justify-content: center;
+}
+
+.experience__tabs {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.experience__button {
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.experience__button:hover {
+  color: hsl(230, 69%, 61%);
+}
+.experience__icon {
+  font-size: 1.8rem;
+  margin-right: 0.25rem;
+}
+.experience__information {
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  column-gap: 1.5rem;
+}
+.experience__title {
+  font-weight: 500;
+}
+.experience__subtitle {
+  display: inline-block;
+  font-size: 0.875rem;
+}
+.experience__time {
+  font-size: 0.75rem;
+  color: hsl(230, 8%, 65%);
+}
+.experience__rounder {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-color: hsl(230, 69%, 61%);
+  border-radius: 50%;
+}
+.experience__line {
+  display: block;
+  width: 0.0625rem;
+  height: 100%;
+  background-color: hsl(230, 69%, 61%);
+  -webkit-transform: translate(0.5rem, -0.5rem);
+  -moz-transform: translate(0.5rem, -0.5rem);
+  -ms-transform: translate(0.5rem, -0.5rem);
+  -o-transform: translate(0.5rem, -0.5rem);
+  transform: translate(0.5rem, -0.5rem);
 }
 
 .nav {
@@ -301,6 +355,7 @@ h3 {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-weight: 500;
+  cursor: pointer;
 }
 .button:hover {
   background-color: hsl(230, 57%, 53%);

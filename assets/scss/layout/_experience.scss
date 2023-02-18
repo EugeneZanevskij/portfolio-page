@@ -1,0 +1,56 @@
+@use "../abstracts" as *;
+
+.experience {
+    &__tabs {
+        @include flex(row, space-evenly);
+        margin-bottom: 2rem;
+    }
+
+    &__button {
+        font-size: 1.5rem;
+        font-weight: $font-medium;
+        cursor: pointer;
+
+        &:hover {
+            color: $first-color;
+        }
+    }
+
+    &__icon {
+        font-size: 1.8rem;
+        margin-right: 0.25rem;
+    }
+
+    &__information {
+        display: grid;
+        grid-template-columns: 1fr max-content 1fr;
+        column-gap: 1.5rem;
+    }
+
+    &__title {
+        font-weight: $font-medium;
+    }
+    &__subtitle {
+        display: inline-block;
+        font-size: $small-font-size;
+    }
+    &__time {
+        font-size: $smaller-font-size;
+        color: $text-color-light;
+    }
+
+    &__rounder {
+        display: inline-block;
+        @include size(rem(16));
+        background-color: $first-color;
+        border-radius: 50%;
+    }
+
+    &__line {
+        display: block;
+        width: rem(1);
+        height: 100%;
+        background-color: $first-color;
+        @include css3-prefix(transform, translate(rem(8), rem(-8)));
+    }
+}
