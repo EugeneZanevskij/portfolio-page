@@ -1,7 +1,7 @@
 @use "../abstracts" as *;
 
 .section {
-    padding: 3rem 0;
+    padding-top: $header-height;
 
     &__title {
     color: $title-color;
