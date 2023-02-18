@@ -1,0 +1,21 @@
+@use "../abstracts" as *;
+
+.about {
+    // &__container {
+    // }
+    &__image {
+        width: rem(200);
+        border-radius: 0.5rem;
+        place-items: center;
+    }
+
+    &__description {
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+    }
+}

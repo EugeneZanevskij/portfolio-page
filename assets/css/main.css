@@ -172,6 +172,20 @@ h3 {
   margin-inline: 0.25rem;
 }
 
+.about__image {
+  width: 12.5rem;
+  border-radius: 0.5rem;
+  place-items: center;
+}
+.about__description {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.about__button {
+  display: flex;
+  justify-content: center;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
