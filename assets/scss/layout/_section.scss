@@ -2,19 +2,20 @@
 
 .section {
     padding: 3rem 0;
-}
 
-.section__title {
+    &__title {
     color: $title-color;
+    }
+
+    &__subtitle {
+        display: block;
+        font-size: $small-font-size;
+        margin-bottom: 3rem;
+    }
+
+    &__title,
+    &__subtitle {
+        text-align: center;
+    }
 }
 
-.section__subtitle {
-    display: block;
-    font-size: $small-font-size;
-    margin-bottom: 3rem;
-}
-
-.section__title,
-.section__subtitle {
-    text-align: center;
-}

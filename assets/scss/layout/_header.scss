@@ -1,9 +1,9 @@
 @use "../abstracts" as *;
 
 .container {
-    max-width: 768px;
-    margin-left: 1.5rem;
-    margin-right: 1.5rem;
+    max-width: rem(768);
+    padding: 0 2rem;
+    margin-inline: auto;
 }
 
 .grid {
@@ -16,6 +16,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    padding: rem(20) 0;
     z-index: $z-fixed;
     background-color: $body-color;
 }

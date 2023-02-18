@@ -1,0 +1,96 @@
+@use "../abstracts" as *;
+
+.nav {
+    @include flex (column, center, flex-start);
+    gap: rem(10);
+    position: relative;
+    
+    @include respond-to(small) {
+        @include flex(row, space-between);
+        height: $header-height;
+    }
+
+    &__logo  {
+        color: $title-color;
+        @include font($big-font-size, $font-bold);
+
+        &:hover {
+            color: $first-color;
+        }
+    }
+
+    &__menu {
+        width: 100%;
+        text-align: center;
+        @include flex;
+        gap: 0;
+        display: none;
+
+        &.active {
+            display: flex;
+        }
+        
+        @include respond-to(small) {
+            @include flex(row);
+            gap: rem(20);
+            width: auto;
+            
+        }
+    }
+
+    &__item {
+        line-height: rem(32);
+        width: 100%;
+    }
+
+    &__link{
+        color: $title-color;
+        display: block;
+        @include size(100%);
+        @include flex(row);
+        gap: rem(10);
+
+        @include respond-to(small) {
+            flex-direction: column;
+        }
+
+        &:hover, &.active {
+            color: $first-color;
+        }
+    }
+
+    &__toggle {
+        position: absolute;
+        right: rem(32);
+        top: rem(0);
+        cursor: pointer;
+        @include size(2.5rem, 1.5rem);
+        @include flex(column, space-between);
+        display: flex;
+        
+        .bar {
+            @include size(rem(40), rem(2));
+            background-color: $title-color;
+            transition: 0.5s;
+        }
+        
+        &.active {
+            .bar:first-child {
+                transform: rotate(45deg) translateY(rem(15.5));
+            }
+            .bar:last-child {
+                transform: rotate(-45deg) translateY(rem(-15.5));
+            }
+            .bar:nth-child(2) {
+                display: none;
+            }
+            .bar:nth-child(3) {
+                display: none;
+            }
+        }
+        
+        @include respond-to(small) {
+            display: none;
+        }
+    }
+}
