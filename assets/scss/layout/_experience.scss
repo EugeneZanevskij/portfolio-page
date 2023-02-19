@@ -4,6 +4,8 @@
     &__tabs {
         @include flex(row, space-evenly);
         margin-bottom: 2rem;
+        flex-wrap: wrap;
+        gap: 1rem;
     }
 
     &__button {
@@ -11,7 +13,7 @@
         font-weight: $font-medium;
         cursor: pointer;
 
-        &:hover {
+        &:hover, &.active {
             color: $first-color;
         }
     }
@@ -52,5 +54,15 @@
         height: 100%;
         background-color: $first-color;
         @include css3-prefix(transform, translate(rem(8), rem(-8)));
+    }
+
+    &__content {
+        &[data-content] {
+            display: none;
+        }
+
+        &.active {
+            display: block;
+        }
     }
 }
