@@ -1,0 +1,50 @@
+@use "../abstracts" as *;
+
+.project {
+    &__container {
+        @include flex();
+        gap: 1.5rem;
+        
+        @include respond-to(medium) {
+            @include columns(31%);
+            flex-direction: row;
+        }
+    }
+    
+    &__content {
+        max-width: 30rem;
+        padding-inline: 1.5rem;
+        text-align: center;
+        border: rem(2) solid $first-color;
+        box-shadow: $shadow-black;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        &:hover {
+            background-color: $first-color-lighter;
+        }
+    }
+
+    &__img{
+        width: 60%;
+        border-radius: 1rem;
+        justify-self: center;
+        transition: 0.5s;
+
+        &:hover {
+            @include css3-prefix(transform, scale(1.2));
+        }
+    }
+
+    &__title {
+        margin-bottom: 0.5rem;
+    }
+    
+    &__description {
+        margin-bottom: 0.5rem;
+    }
+
+    &__button:hover {
+        @include css3-prefix(transform, translateX(0.25rem));
+    }
+}

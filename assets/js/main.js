@@ -39,11 +39,20 @@ tabs.forEach(tab => {
   })
 })
 
-/*==================== SERVICES MODAL ====================*/
+/* SWIPER */
+const swiper = new Swiper('.swiper', {
+  // Optional parameters
+  direction: 'vertical',
+  loop: true,
 
-
-/*==================== PORTFOLIO SWIPER  ====================*/
-
+  // Navigation arrows
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  mousewheel: true,
+  keyboard: true,
+});
 
 /*==================== TESTIMONIAL ====================*/
 
