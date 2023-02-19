@@ -1,0 +1,40 @@
+@use "../abstracts" as *;
+
+.skills {
+    &__container {
+        margin-top: 1.5rem;
+        @include columns(48%);
+        align-items: center;
+        
+        @include respond-to(medium) {
+            @include columns(24%);
+            flex-direction: row;
+        }
+    }
+    
+    &__card {
+        
+        padding-inline: 1.5rem;
+        text-align: center;
+        box-shadow: $shadow-black;
+        border-radius: 1rem;
+        padding: 1rem;
+
+        &:hover {
+            background-color: $first-color-lighter;
+        }
+    }
+
+    &__icon{
+        font-size: 8rem;
+        transition: 0.5s;
+        color: $first-color;
+
+        &:is(:hover>&) {
+            color: $first-color-alt;
+        }
+        &:hover {
+            @include css3-prefix(transform, scale(1.2));
+        }
+    }
+}
