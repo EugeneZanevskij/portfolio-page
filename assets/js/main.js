@@ -39,28 +39,26 @@ tabs.forEach(tab => {
   })
 })
 
-/* SWIPER */
-const swiper = new Swiper('.swiper', {
-  // Optional parameters
-  direction: 'vertical',
-  loop: true,
+/* SCROLL SECTIONS ACTIVE LINK */
+const sections = document.querySelectorAll('section[id]')
 
-  // Navigation arrows
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-  mousewheel: true,
-  keyboard: true,
-});
+function scrollActive(){
+    const scrollY = window.pageYOffset;
 
-/*==================== TESTIMONIAL ====================*/
+    sections.forEach(current =>{
+        const sectionHeight = current.offsetHeight;
+        const sectionTop = current.offsetTop - 72;
+        const sectionId = current.getAttribute('id');
+        if(scrollY >= sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.add('active');
+        }else{
+            document.querySelector('.nav__menu a[href*=' + sectionId + ']').classList.remove('active');
+        }
+    })
+}
+window.addEventListener('scroll', scrollActive);
 
-
-/*==================== SCROLL SECTIONS ACTIVE LINK ====================*/
-
-
-/*==================== CHANGE BACKGROUND HEADER ====================*/ 
+/* HEADER ON SCROLL */ 
 
 
 /*==================== SHOW SCROLL UP ====================*/ 
