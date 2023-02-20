@@ -1,0 +1,49 @@
+@use "../abstracts" as *;
+
+.footer {
+    margin-top: 1rem;
+    padding: 2rem 0;
+    background-color: $first-color-second;
+
+    &__container {
+        gap: 3.5rem;
+    }
+
+    &__title {
+        font-size: $big-font-size;
+        margin-bottom: 0.5rem;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: column;
+        row-gap: 1rem;
+    }
+
+    &__link:hover {
+        color: $first-color-lighter;
+    }
+    
+    &__social {
+        font-style: 1.25rem;
+        margin-right: 1.5rem;
+        
+        &:hover {
+            color: $first-color-lighter;
+        }
+    }
+
+    &__copy {
+        font-size: $smaller-font-size;
+        text-align: center;
+        color: $text-color-light;
+        margin-top: 3rem;
+    }
+
+    &__title,
+    &__subtitle,
+    &__link,
+    &__social {
+        color: hsl(0, 0%, 100%);
+    }
+}

@@ -11,9 +11,10 @@
     }
 
     &__icon {
-        font-style: 2rem;
+        font-size: 2rem;
+        width: 2rem;
         color: $first-color;
-        margin-right: 0.5rem;
+        margin-right: 0.75rem;
     }
 
     &__title {
