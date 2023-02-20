@@ -59,7 +59,14 @@ function scrollActive(){
 window.addEventListener('scroll', scrollActive);
 
 /* HEADER ON SCROLL */ 
-
+function scrollHeader(){
+  const nav = document.getElementById('header');
+  // When the scroll is greater than 200 viewport height, add the scroll-header class to the header tag
+  if(this.scrollY >= 72) 
+    nav.classList.add('scroll'); 
+  else nav.classList.remove('scroll');
+}
+window.addEventListener('scroll', scrollHeader);
 
 /*==================== SHOW SCROLL UP ====================*/ 
 

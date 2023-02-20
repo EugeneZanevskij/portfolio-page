@@ -18,4 +18,8 @@
     left: 0;
     z-index: $z-fixed;
     background-color: $body-color;
+
+    &.scroll {
+        box-shadow: $shadow-black;
+    }
 }
