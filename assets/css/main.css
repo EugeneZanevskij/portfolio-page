@@ -353,6 +353,44 @@ h3 {
   transform: scale(1.2);
 }
 
+.contact__container {
+  row-gap: 3rem;
+}
+.contact__info {
+  display: flex;
+  margin-bottom: 1.5rem;
+}
+.contact__icon {
+  font-style: 2rem;
+  color: hsl(230, 69%, 61%);
+  margin-right: 0.5rem;
+}
+.contact__title {
+  font-weight: 500;
+}
+.contact__subtitle {
+  color: hsl(230, 8%, 65%);
+}
+.contact__content {
+  background-color: hsl(230, 70%, 96%);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+.contact__label {
+  font-size: 0.75rem;
+  color: hsl(230, 8%, 15%);
+}
+.contact__input {
+  width: 100%;
+  background-color: hsl(230, 70%, 96%);
+  color: hsl(230, 8%, 45%);
+  font-family: "Inika", serif;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  padding: 0.25rem 0.5rem;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
