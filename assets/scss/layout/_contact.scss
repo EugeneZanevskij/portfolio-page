@@ -3,6 +3,10 @@
 .contact {
     &__container {
         row-gap: 3rem;
+
+        @include respond-to(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
     }
 
     &__info {
@@ -22,7 +26,7 @@
     }
 
     &__subtitle {
-        color: $text-color-light;
+        color: $text-color;
     }
 
     &__content {
@@ -33,13 +37,13 @@
 
     &__label {
         font-size: $smaller-font-size;
-        color: $title-color;
+        color: $body-color;
     }
 
     &__input {
         width: 100%;
         background-color: $input-color;
-        color: $text-color;
+        color: $body-color;
         font-family: $font-family;
         font-size: $normal-font-size;
         border: none;

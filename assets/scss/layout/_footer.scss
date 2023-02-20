@@ -6,7 +6,14 @@
     background-color: $first-color-second;
 
     &__container {
-        gap: 3.5rem;
+        gap: 3rem;
+
+        @include respond-to(small) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+        @include respond-to(medium) {
+            grid-template-columns: repeat(3, 1fr);
+        }
     }
 
     &__title {
@@ -18,6 +25,11 @@
         display: flex;
         flex-direction: column;
         row-gap: 1rem;
+
+        @include respond-to (medium) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
     }
 
     &__link:hover {
@@ -36,7 +48,7 @@
     &__copy {
         font-size: $smaller-font-size;
         text-align: center;
-        color: $text-color-light;
+        color: $text-color;
         margin-top: 3rem;
     }
 

@@ -8,6 +8,10 @@
     &__content {
         grid-template-columns: 1fr 6fr;
         align-items: center;
+        
+        @include respond-to(small) {
+            grid-template-columns: max-content 1fr 1fr;
+        }
     }
 
     &__social {
@@ -25,9 +29,19 @@
         }
     }
 
+    &__img {
+        @include respond-to (small) {
+            order:1;
+            justify-self: center;
+        }
+    }
+
     &__blob {
         @include size(rem(200));
         fill: $first-color;
+        @include respond-to (medium) {
+            @include size(rem(300));
+        }
     }
 
     &__blob-image {
@@ -36,6 +50,10 @@
 
     &__info {
         grid-column: 1/3;
+        
+        @include respond-to(small) {
+            grid-column:initial;
+        }
     }
 
     &__title {
