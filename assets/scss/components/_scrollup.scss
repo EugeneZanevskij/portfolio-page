@@ -1,0 +1,25 @@
+@use "../abstracts" as *;
+
+.scrollup {
+    position: fixed;
+    right: 2rem;
+    bottom: -3rem;
+    background-color: $first-color;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    z-index: $z-tooltip;
+    transition: 0.5s;
+
+    &:hover {
+        background-color: $first-color-alt;
+    }
+
+    &__icon {
+        font-size: 1.5rem;
+        color: hsl(0, 0%, 100%);
+    }
+
+    &__show {
+        bottom: 3rem;
+    }
+}

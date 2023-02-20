@@ -560,4 +560,25 @@ h3 {
   align-items: center;
 }
 
+.scrollup {
+  position: fixed;
+  right: 2rem;
+  bottom: -3rem;
+  background-color: hsl(230, 69%, 61%);
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  z-index: 10;
+  transition: 0.5s;
+}
+.scrollup:hover {
+  background-color: hsl(230, 57%, 53%);
+}
+.scrollup__icon {
+  font-size: 1.5rem;
+  color: hsl(0, 0%, 100%);
+}
+.scrollup__show {
+  bottom: 3rem;
+}
+
 /*# sourceMappingURL=main.css.map */

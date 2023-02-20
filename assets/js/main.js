@@ -68,7 +68,19 @@ function scrollHeader(){
 }
 window.addEventListener('scroll', scrollHeader);
 
-/*==================== SHOW SCROLL UP ====================*/ 
-
+/* SCROLL UP */ 
+function scrollUp(){
+  const scrollUp = document.getElementById('scroll-up');
+  // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+  if(this.scrollY >= 300) {
+    scrollUp.classList.add('scrollup__show');
+  } else {
+    scrollUp.classList.remove('scrollup__show');
+  }
+  scrollUp.addEventListener("click", () => {
+    scrollTo(0, 0);
+  })
+}
+window.addEventListener('scroll', scrollUp);
 
 /*==================== DARK LIGHT THEME ====================*/ 
